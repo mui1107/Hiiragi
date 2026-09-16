@@ -16,6 +16,9 @@ const SITE_DATA = {
   // ---------- 個人檔案（最上面那一區）----------
   profile: {
     avatar: "images/avatar.png",
+    // 頭像立繪的繪師標註，沒有就留空 ""
+    avatarArtist: "",
+    avatarArtistUrl: "",
     displayName: "慕伊",
     emoji: "",
     tags: ["男的", "INTP-T"],
@@ -68,11 +71,20 @@ const SITE_DATA = {
 
   // ---------- 圖片集 ----------
   // desc 是點進去放大後、圖片下方顯示的說明文字，留空字串 "" 就不會顯示
+  // artist 是繪師名字，artistUrl 是繪師的帳號連結（沒有的話留空 "" 就不會顯示）
   gallery: [
-    { title: "寄情書", tag: "推", image: "images/gallery/qingshu.jpg", desc: "" },
-    { title: "立繪", tag: "oc", image: "images/gallery/lihui.png", desc: "" },
-    { title: "餵食", tag: "推", image: "images/gallery/weishi.jpg", desc: "" },
-    { title: "裙子", tag: "oc", image: "images/gallery/IMG_0247.png", desc: "" },
+    { title: "寄情書", tag: "推", image: "images/gallery/qingshu.jpg", desc: "", artist: "", artistUrl: "" },
+    { title: "立繪", tag: "oc", image: "images/gallery/lihui.png", desc: "", artist: "", artistUrl: "" },
+    { title: "餵食", tag: "推", image: "images/gallery/weishi.jpg", desc: "", artist: "", artistUrl: "" },
+    { title: "裙子", tag: "oc", image: "images/gallery/IMG_0247.jpg", desc: "", artist: "", artistUrl: "" },
+  ],
+
+  // ---------- R-18 / 限制級圖片（只放文字連結，圖檔請放在外部平台）----------
+  // 只會顯示在 works.html 的「18+」區塊裡，點過確認鈕才會看到
+  // url 貼外部連結（例如 Pixiv 圖片網址）；url 留空 "" 的話會顯示成純文字（不能點）
+  // artist 是繪師名字，artistUrl 是繪師的帳號連結（沒有的話留空 "" 就不會顯示）
+  nsfw: [
+    { title: "圖片名稱", tag: "R18", url: "", desc: "", artist: "", artistUrl: "" },
   ],
 
   // ---------- 遊戲好友 / 好友代碼 ----------

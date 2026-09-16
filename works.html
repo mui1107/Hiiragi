@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>慕伊</title>
-<meta name="description" content="慕伊的檔案" />
+<title>圖片集 - 慕伊</title>
+<meta name="description" content="慕伊的圖片集" />
+<meta name="robots" content="noindex" />
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,39 +16,31 @@
 
 <div class="page">
 
-  <!-- 個人檔案 -->
-  <header class="hero card-section" id="hero"></header>
+  <a class="back-link" href="index.html">← 回首頁</a>
 
-  <!-- 關於 / 遊戲清單 -->
-  <section class="section card-section" id="about-section">
-    <div id="about"></div>
+  <header class="works-header">
+    <h1 class="works-title">圖片集</h1>
+  </header>
+
+  <!-- 一般向 -->
+  <section class="section" id="gallery-section">
+    <h2 class="section-title">一般向</h2>
+    <div class="gallery-filters" id="gallery-filters"></div>
+    <div class="gallery-grid" id="gallery-grid"></div>
   </section>
 
   <div class="divider" aria-hidden="true"><span>✦</span></div>
 
-  <!-- 圖片集連結 -->
-  <section class="section card-section" id="works-link-section">
-    <h2 class="section-title">圖片集</h2>
-    <a class="works-link" href="works.html">
-      查看完整圖片集
-      <span class="works-link-arrow">→</span>
-    </a>
-  </section>
+  <!-- R-18 -->
+  <section class="section" id="nsfw-section">
+    <h2 class="section-title">R-18 / 限制級</h2>
 
-  <div class="divider" aria-hidden="true"><span>✦</span></div>
+    <div class="nsfw-gate" id="nsfw-gate">
+      <p class="nsfw-gate-text">此區塊包含限制級（R-18）內容，僅放外部連結，圖檔並不存放在本站。請先確認你已年滿 18 歲。</p>
+      <button class="nsfw-gate-btn" id="nsfw-gate-btn">我已滿 18 歲，顯示連結</button>
+    </div>
 
-  <!-- 遊戲好友 -->
-  <section class="section card-section" id="friends-section">
-    <h2 class="section-title">遊戲好友</h2>
-    <div class="friends-list" id="friends-list"></div>
-  </section>
-
-  <div class="divider" aria-hidden="true"><span>✦</span></div>
-
-  <!-- 社交連結 -->
-  <section class="section card-section" id="social-section">
-    <h2 class="section-title">社交連結</h2>
-    <div class="social-list" id="social-list"></div>
+    <div class="nsfw-list" id="nsfw-list" hidden></div>
   </section>
 
   <footer class="footer">
@@ -66,6 +59,6 @@
 </div>
 
 <script src="data.js?v=1.1"></script>
-<script src="script.js?v=1.1"></script>
+<script src="works.js?v=1.1"></script>
 </body>
 </html>

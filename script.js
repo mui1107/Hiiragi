@@ -26,6 +26,10 @@ function renderHero(data) {
   const tags = el("div", "tag-row");
   (data.tags || []).forEach(t => tags.appendChild(el("span", "tag", t)));
   hero.append(frame, name, rule, tags);
+  if (data.avatarArtist) {
+    const credit = el("p", "avatar-credit", `繪師：${data.avatarArtistUrl ? `<a href="${data.avatarArtistUrl}" target="_blank" rel="noopener noreferrer">${data.avatarArtist}</a>` : data.avatarArtist}`);
+    hero.append(credit);
+  }
 }
 
 /* ---------- About / games ---------- */
@@ -93,7 +97,7 @@ function renderGallery(items) {
           <span class="g-title">${item.title}</span>
           ${item.tag ? `<span class="g-tag">${item.tag}</span>` : ""}
         </div>`;
-      card.addEventListener("click", () => openLightbox(item.image, item.title, item.tag, item.desc));
+      card.addEventListener("click", () => openLightbox(item.image, item.title, item.tag, item.desc, item.artist, item.artistUrl));
       grid.appendChild(card);
     });
   }
@@ -155,7 +159,7 @@ function renderSocial(list) {
 }
 
 /* ---------- Lightbox ---------- */
-function openLightbox(src, title, tag, desc) {
+function openLightbox(src, title, tag, desc, artist, artistUrl) {
   const box = document.getElementById("lightbox");
   const img = document.getElementById("lightbox-img");
   const caption = document.getElementById("lightbox-caption");
@@ -165,8 +169,9 @@ function openLightbox(src, title, tag, desc) {
   const hasTitle = !!title;
   const hasTag = !!tag;
   const hasDesc = !!desc;
+  const hasArtist = !!artist;
 
-  if (hasTitle || hasTag || hasDesc) {
+  if (hasTitle || hasTag || hasDesc || hasArtist) {
     caption.hidden = false;
     caption.innerHTML = `
       ${hasTitle || hasTag ? `
@@ -175,6 +180,7 @@ function openLightbox(src, title, tag, desc) {
           ${hasTag ? `<span class="lightbox-caption-tag">${tag}</span>` : ""}
         </div>` : ""}
       ${hasDesc ? `<p class="lightbox-caption-desc">${desc}</p>` : ""}
+      ${hasArtist ? `<p class="lightbox-caption-artist">繪師：${artistUrl ? `<a href="${artistUrl}" target="_blank" rel="noopener noreferrer">${artist}</a>` : artist}</p>` : ""}
     `;
   } else {
     caption.hidden = true;
@@ -191,7 +197,9 @@ function closeLightbox() {
 document.addEventListener("DOMContentLoaded", () => {
   renderHero(SITE_DATA.profile);
   renderAbout(SITE_DATA);
-  renderGallery(SITE_DATA.gallery);
+  if (document.getElementById("gallery-grid")) {
+    renderGallery(SITE_DATA.gallery);
+  }
   renderFriends(SITE_DATA.friends);
   renderSocial(SITE_DATA.social);
 
