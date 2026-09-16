@@ -140,7 +140,7 @@ body {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 20px;
-  box-shadow: 0 18px 34px -26px rgba(58, 33, 48, 0.35);
+  box-shadow: 0 26px 46px -18px rgba(58, 33, 48, 0.6), 0 4px 10px rgba(58, 33, 48, 0.16);
 }
 .card-section:first-of-type,
 .card-section + .card-section {
@@ -168,6 +168,7 @@ body {
 
 .about-block { margin-bottom: 30px; }
 .about-block:last-child { margin-bottom: 0; }
+.intro-block { margin-top: 48px; }
 
 .about-label {
   font-family: var(--serif);
@@ -592,3 +593,4 @@ a.social-row:hover { border-color: var(--rose); background: rgba(var(--rose-rgb)
   .hero-name { font-size: 28px; }
   .hero-frame { width: 190px; height: 224px; }
 }
+

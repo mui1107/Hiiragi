@@ -54,7 +54,9 @@ function plainBlock(label, text, note) {
 function renderAbout(data) {
   const wrap = document.getElementById("about");
   if (data.intro) {
-    wrap.appendChild(plainBlock("自我介紹", data.intro));
+    const introBlock = plainBlock("自我介紹", data.intro);
+    introBlock.classList.add("intro-block");
+    wrap.appendChild(introBlock);
   }
   if (data.games) {
     wrap.appendChild(chipBlock("在玩", data.games.playing));
