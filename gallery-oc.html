@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OC - 慕伊的創作區</title>
+<meta name="description" content="慕伊的創作區 - OC" />
+<meta name="robots" content="noindex" />
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1.5" />
+</head>
+<body>
+
+<div class="page">
+
+  <a class="back-link" href="works.html">← 回創作區</a>
+
+  <header class="works-header">
+    <h1 class="works-title">OC</h1>
+  </header>
+
+  <p class="category-intro" id="category-intro" hidden></p>
+
+  <div class="gallery-grid" id="gallery-grid"></div>
+
+  <div class="divider" aria-hidden="true"><span>✦</span></div>
+
+  <!-- R-18 -->
+  <section class="section" id="nsfw-section">
+    <h2 class="section-title">R-18 / 限制級</h2>
+
+    <div class="nsfw-gate" id="nsfw-gate">
+      <p class="nsfw-gate-text">此區塊包含限制級（R-18）內容，僅放外部連結，圖檔並不存放在本站。請先確認你已年滿 18 歲。</p>
+      <button class="nsfw-gate-btn" id="nsfw-gate-btn">我已滿 18 歲，顯示連結</button>
+    </div>
+
+    <div class="nsfw-list" id="nsfw-list" hidden></div>
+  </section>
+
+  <footer class="footer">
+    <p>手動打造，非官方頁面 · 內容如有更新請直接聯絡本人</p>
+  </footer>
+
+</div>
+
+<!-- 圖片燈箱 -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-close" id="lightbox-close" aria-label="關閉">✕</button>
+  <div class="lightbox-body">
+    <img id="lightbox-img" src="" alt="" />
+    <div class="lightbox-caption" id="lightbox-caption" hidden></div>
+  </div>
+</div>
+
+<script src="data.js?v=1.5"></script>
+<script>window.PAGE_TAG = "oc";</script>
+<script src="gallery-category.js?v=1.5"></script>
+</body>
+</html>

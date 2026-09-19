@@ -434,6 +434,23 @@ a.social-row:hover { border-color: var(--rose); background: rgba(var(--rose-rgb)
 .works-link:hover { border-color: var(--rose); transform: translateX(2px); }
 .works-link-arrow { color: var(--rose); font-size: 16px; }
 
+.works-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.category-intro {
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: var(--text-muted);
+  white-space: pre-line;
+  margin: 0 0 26px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+.category-intro[hidden] { display: none; }
+
 /* ---------------- 圖片集頁面（works.html）---------------- */
 
 .back-link {
