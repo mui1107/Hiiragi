@@ -20,9 +20,20 @@ function renderArticleList() {
   const list = (SITE_DATA.articles || []).filter(a => a.category === cat);
   const wrap = document.getElementById("article-list");
   const backLink = document.getElementById("back-link");
+  const introEl = document.getElementById("articles-intro");
 
   if (backLink && cat) {
     backLink.href = "gallery-" + (cat === "推" ? "tui" : cat) + ".html";
+  }
+
+  if (introEl) {
+    const introText = SITE_DATA.articlesIntro ? SITE_DATA.articlesIntro[cat] : "";
+    if (introText) {
+      introEl.hidden = false;
+      introEl.textContent = introText;
+    } else {
+      introEl.hidden = true;
+    }
   }
 
   if (!list.length) {
