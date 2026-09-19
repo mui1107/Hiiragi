@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>文章 - 慕伊的創作區</title>
+<meta name="description" content="慕伊的文章" />
+<meta name="robots" content="noindex" />
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1.6" />
+</head>
+<body>
+
+<div class="page">
+
+  <a class="back-link" id="back-link" href="articles.html">← 回文章列表</a>
+
+  <header class="works-header">
+    <h1 class="works-title" id="article-title"></h1>
+  </header>
+
+  <p class="article-body" id="article-body"></p>
+
+  <footer class="footer">
+    <p>手動打造，非官方頁面 · 內容如有更新請直接聯絡本人</p>
+  </footer>
+
+</div>
+
+<script src="data.js?v=1.6"></script>
+<script src="articles.js?v=1.6"></script>
+<script>document.addEventListener("DOMContentLoaded", renderArticle);</script>
+</body>
+</html>

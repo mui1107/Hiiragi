@@ -440,6 +440,10 @@ a.social-row:hover { border-color: var(--rose); background: rgba(var(--rose-rgb)
   gap: 12px;
 }
 
+.articles-link {
+  margin-bottom: 26px;
+}
+
 .category-intro {
   font-size: 14.5px;
   line-height: 1.8;
@@ -450,6 +454,13 @@ a.social-row:hover { border-color: var(--rose); background: rgba(var(--rose-rgb)
   border-bottom: 1px solid var(--line);
 }
 .category-intro[hidden] { display: none; }
+
+.article-body {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--text);
+  white-space: pre-line;
+}
 
 /* ---------------- 圖片集頁面（works.html）---------------- */
 
